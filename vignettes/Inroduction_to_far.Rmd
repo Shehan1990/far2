@@ -1,0 +1,45 @@
+---
+title: "Inroduction to far calculations"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Inroduction_to_far}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The functions provided in this **far()** package are able to be used to calculate the required values based on data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes
+
+
+```{r setup}
+library(far)
+```
+
+This is the introduction to "fars_read" function.
+
+### fars_read()
+
+This function returns reading the dataset. If the dataset is not available it informs about the unavailability.
+
+### make_filename()
+
+This function returns making the file name
+
+### fars_read_years()
+
+This function returns the "Month" & "Year". If incorrect year has entered it retunrs informing that the year is invalid.
+
+### fars_summarize_years()
+
+This function returns the number of records grouping by year & month.
+
+### fars_map_state()
+
+This function returns the map of the given state based on latitude and longitude from the dataset. If an invalid state number is incerted, an error message will be displayed.
+
